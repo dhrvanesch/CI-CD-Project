@@ -44,5 +44,24 @@ changed: [172.31.27.222]
 
 PLAY RECAP *********************************************************************************************************************************************************************************************
 172.31.27.222              : ok=4    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+~~~~
 
 ~~~~
+[root@ip-172-31-27-222 ~]# kubectl get all
+NAME                                  READY   STATUS    RESTARTS   AGE
+pod/dhrvanesch-app-54c56db745-24gbm   1/1     Running   0          10m
+pod/dhrvanesch-app-54c56db745-khfvk   1/1     Running   0          10m
+
+NAME                         TYPE           CLUSTER-IP      EXTERNAL-IP                                                               PORT(S)          AGE
+service/dhrvanesch-service   LoadBalancer   10.100.170.90   afaefb2c727de4c05bd28c62bc0f8c9b-397438034.eu-north-1.elb.amazonaws.com   8080:32405/TCP   10m
+service/kubernetes           ClusterIP      10.100.0.1      <none>                                                                    443/TCP          162m
+
+NAME                             READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/dhrvanesch-app   2/2     2            2           10m
+
+NAME                                        DESIRED   CURRENT   READY   AGE
+replicaset.apps/dhrvanesch-app-54c56db745   2         2         2       10m
+replicaset.apps/dhrvanesch-app-7dd4d5f96d   0         0         0       10m
+~~~
+
+
