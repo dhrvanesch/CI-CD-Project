@@ -1,0 +1,14 @@
+---
+- hosts: ansible
+
+  tasks:
+  - name: create docker image
+    command: docker build -t app:latest .
+    args:
+     chdir: /opt/docker
+
+  - name: create tag
+    command: docker tag app:latest dhrvanesch/app:latest
+
+  - name: push docker image
+    command: docker push dhrvanesch/app:latest
