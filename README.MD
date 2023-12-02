@@ -1,3 +1,13 @@
+
+![live](https://github.com/dhrvanesch/Java-App/assets/13959713/a994e3ef-6485-469c-aee4-7391a304926b)
+
+
+
+
+
+
+
+
 ~~~~
 [ansadmin@ansible-server docker]$ ansible-playbook -i /opt/docker/hosts/ create-docker-image.yml
 
